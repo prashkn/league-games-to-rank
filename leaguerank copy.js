@@ -1,3 +1,4 @@
+//prashant naganaboyina
 //we wanna see how many games we have to play to get gold1.
 //need 100 lp per division, plus winning 2/3 of the promos.
 //we gain 21 lp per win, lose 19 per loss.
@@ -6,28 +7,28 @@
 //while div != gold 1, run the function that keeps on going until you reach promos.
 //then run the promo games, if you fail lp loss if you win move up division.
 
-let lpGain = 21;
-let lpLoss = 17;
-let gameCounter = 0;
-let promoWon = 0;
-let tempLoss = 0;
-let numDiv = 0;
-let currentDiv = "Gold" + (3-numDiv).toString();
-let currentLp = 55;
-let totalGames = 0;
+let lpGain = 21; //how much LP do you gain per win?
+let lpLoss = 17; //how much LP do you lose per loss?
+let gameCounter = 0; //dont change this!!!
+let promoWon = 0; //dont change this!!!
+let tempLoss = 0; //dont change this!!!
+let numDiv = 0; //dont change this!!!
+let currentDiv = "Gold" + (3-numDiv).toString(); //What is your current rank? Replace Gold w rank and 3 with division.
+let currentLp = 55; //what is current LP?
+let totalGames = 0; //dont change this!!!
 let winLossArray = [];
 for (let x = 0; x < 100; x++){
-    if (x <= 54){
+    if (x <= 54){ //change 54 to your winrate
         winLossArray[x] = 'lpGain';
     }
-    if (x >= 55){
+    if (x >= 55){ //your winrate + 1;
         winLossArray[x] = 'lpLoss';
     }
 }
 
 
-for (let n = 0; n <= 100000; n++){
-    while (currentDiv != "Gold1"){
+for (let n = 0; n <= 100000; n++){ //you can change how many trials you want to run, I recommend this amount though.
+    while (currentDiv != "Gold1"){ //change to goal rank
         currentDiv = "Gold" + (3-numDiv).toString();
         divisionGames();
     }
@@ -35,7 +36,7 @@ for (let n = 0; n <= 100000; n++){
     totalGames += gameCounter;
     reset();
 }
-console.log("Average Amount of Games: " + (totalGames/100000));
+console.log("Average Amount of Games: " + (totalGames/100000)); //amnt of trials
 
 
 function divisionGames(){
@@ -72,7 +73,7 @@ function runPromos(){
     promoWon = 0;
 }
 
-function reset(){
+function reset(){ //change to your preferences
     lpGain = 21;
     lpLoss = 17;
     gameCounter = 0;
