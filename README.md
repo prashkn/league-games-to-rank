@@ -1,4 +1,4 @@
-# League of Legends Average Games to Rank
+# League of Legends Average Games to Goal Rank
 Predicts how many games you will have to play to reach a certain rank. User can change how many trials to run and their current rank, LP, and winrate.
 <br>
 Let say you are gold 4, and want to be gold 1. Simply enter your rank goal, current rank, winrate, and how much LP you win and lose a game, and the program will predict how many games you will have to play to win.
